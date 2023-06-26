@@ -5,4 +5,28 @@
 
 .keen-slider__slide > img {
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
+
+
+@media (max-width: 900px) {
+  .images-slider {
+    flex-direction: column;
+  }
+
+  .keen-slider {
+    min-height: 50vh !important;
+    width: 100vw  !important;
+  }
+
+  .keen-slider__slide {
+    overflow: hidden;
+
+  }
+
+  .keen-slider__slide > img {
+    rotate: 90deg;
+  }
+
+ }

@@ -1,0 +1,29 @@
+section {
+  height: 100vh;
+  width: 100vw;
+}
+.contrib-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; 
+  justify-content: center;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100Vh;
+  overflow: hidden;
+}
+
+.product-wrapper > * {
+  flex: 1;
+}
