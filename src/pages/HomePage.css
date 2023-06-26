@@ -1,0 +1,8 @@
+.images-slider {
+  display: flex;
+}
+
+.images-slider > * {
+  height: 100vh;
+  overflow: hidden;
+}
