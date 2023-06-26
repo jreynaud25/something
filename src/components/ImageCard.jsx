@@ -11,10 +11,10 @@ const ImageCard = ({ direction }) => {
 
     function dispatch(e, name) {
       position.x -= e.deltaX;
-      if (direction === "top") {
+      if (direction === "left") {
         position.y -= e.deltaY;
       }
-      if (direction === "down") {
+      if (direction === "right") {
         position.y += e.deltaY;
       }
       slider.container.dispatchEvent(

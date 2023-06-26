@@ -1,7 +1,8 @@
 import React from "react";
+import "./TopBar.css";
 
 const TopBar = () => {
-  return <div>TopBar</div>;
+  return <button className="about-btn">About</button>;
 };
 
 export default TopBar;
