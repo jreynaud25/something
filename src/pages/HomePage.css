@@ -4,6 +4,17 @@
 }
 
 .images-slider > * {
-  height: 100vh;
+  min-height: 100vh;
+
+  width: 50vw;
   overflow: hidden;
+}
+
+.keen-slider__slide {
+  height: 100%;
+  width: 100%;
+}
+.keen-slider__slide img {
+  object-fit: cover;
+  height: 100%;
 }

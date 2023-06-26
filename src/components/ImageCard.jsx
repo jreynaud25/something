@@ -4,6 +4,15 @@ import "./testSliderStyle.css";
 import "./ImageCard.css";
 
 const ImageCard = ({ direction }) => {
+  const [loaded, setLoaded] = React.useState([]);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const new_loaded = [...loaded];
+    new_loaded[currentSlide] = true;
+    setLoaded(new_loaded);
+  }, [currentSlide]);
+
   const WheelControls = (slider) => {
     let touchTimeout;
     let position;
@@ -66,6 +75,9 @@ const ImageCard = ({ direction }) => {
   };
   const [sliderRef] = useKeenSlider(
     {
+      animationEnded(s) {
+        setCurrentSlide(s.track.details.rel);
+      },
       loop: true,
       rubberband: false,
       vertical: true,
@@ -78,13 +90,24 @@ const ImageCard = ({ direction }) => {
       {direction === "left"
         ? Array.from({ length: 10 }, (_, i) => (
             <div className="keen-slider__slide number-slide1" key={i}>
-              <img src={`./../../public/images/IMAGE_${2 * i}.png`} alt="" />
+              <img
+                src={
+                  loaded[i]
+                    ? `./../../public/images/IMAGE_${2 * i + 2}.png`
+                    : ""
+                }
+                alt=""
+              />
             </div>
           ))
         : Array.from({ length: 10 }, (_, i) => (
             <div className="keen-slider__slide number-slide1" key={i}>
               <img
-                src={`./../../public/images/IMAGE_${2 * i + 1}.png`}
+                src={
+                  loaded[i]
+                    ? `./../../public/images/IMAGE_${2 * i + 1}.png`
+                    : ""
+                }
                 alt=""
               />
             </div>
