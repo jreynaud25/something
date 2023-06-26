@@ -6,6 +6,33 @@ import "./ImageCard.css";
 const ImageCard = ({ direction }) => {
   const [loaded, setLoaded] = React.useState([]);
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [sortedData, setSortedData] = React.useState(null);
+
+  React.useEffect(() => {
+    const url =
+      "https://res.cloudinary.com/dci6ayb3x/image/list/SOMETHING.json";
+    // Fetch the JSON data
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        // Sort the JSON based on the image number in the "public_id" property
+        console.log("my data", data);
+        setSortedData(
+          data.resources.sort((a, b) => {
+            const imageNumberA = parseInt(a.public_id.split("_")[1]);
+            const imageNumberB = parseInt(b.public_id.split("_")[1]);
+            return imageNumberA - imageNumberB;
+          })
+        );
+
+        // Output the sorted JSON
+        //   console.log(JSON.stringify(sortedData, null, 4));
+        console.log("sorted", sortedData);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, [sortedData]);
 
   React.useEffect(() => {
     const new_loaded = [...loaded];
@@ -85,7 +112,7 @@ const ImageCard = ({ direction }) => {
     [WheelControls]
   );
 
-  return (
+  return sortedData ? (
     <div ref={sliderRef} className="keen-slider">
       {direction === "left"
         ? Array.from({ length: 10 }, (_, i) => (
@@ -93,7 +120,9 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `./../../public/images/IMAGE_${2 * i + 2}.png`
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1920/v1687789598/${
+                        sortedData[2 * i + 1].public_id
+                      }`
                     : ""
                 }
                 alt=""
@@ -105,7 +134,9 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `./../../public/images/IMAGE_${2 * i + 1}.png`
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1920/v1687789598/${
+                        sortedData[2 * i + 2].public_id
+                      }`
                     : ""
                 }
                 alt=""
@@ -113,6 +144,8 @@ const ImageCard = ({ direction }) => {
             </div>
           ))}
     </div>
+  ) : (
+    <div>Loading</div>
   );
 };
 
