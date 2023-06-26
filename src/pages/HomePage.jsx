@@ -8,8 +8,8 @@ const HomePage = () => {
     <div>
       <TopBar />
       <div className="images-slider">
-        <ImageCard direction="top" />
-        <ImageCard direction="down" />
+        <ImageCard direction="left" />
+        <ImageCard direction="right" />
       </div>
     </div>
   );
