@@ -1,4 +1,5 @@
 .keen-slider__slide {
   min-height: 100vh;
   width: 50vw;
+  object-fit: cover;
 }
