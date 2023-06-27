@@ -16,24 +16,19 @@ const ImageCard = ({ direction }) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        // Sort the JSON based on the image number in the "public_id" property
-        console.log("my data", data);
-        setSortedData(
-          data.resources.sort((a, b) => {
-            const imageNumberA = parseInt(a.public_id.split("_")[1]);
-            const imageNumberB = parseInt(b.public_id.split("_")[1]);
-            return imageNumberA - imageNumberB;
-          })
-        );
+        // console.log("raw data", data);
 
-        // Output the sorted JSON
-        //   console.log(JSON.stringify(sortedData, null, 4));
-        console.log("sorted", sortedData);
+        let sorting = data.resources.sort((a, b) => {
+          const imageNumberA = parseInt(a.public_id.split("_")[1]);
+          const imageNumberB = parseInt(b.public_id.split("_")[1]);
+          return imageNumberA - imageNumberB;
+        });
+        setSortedData(sorting);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, [sortedData]);
+  }, []);
 
   React.useEffect(() => {
     const new_loaded = [...loaded];
@@ -41,11 +36,11 @@ const ImageCard = ({ direction }) => {
     setLoaded(new_loaded);
   }, [currentSlide]);
 
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = `product`; 
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `product`;
     navigate(path);
-  }
+  };
 
   const WheelControls = (slider) => {
     let touchTimeout;
@@ -118,14 +113,12 @@ const ImageCard = ({ direction }) => {
     },
     [WheelControls]
   );
-
+  // console.log("sorted data", sortedData);
 
   return sortedData ? (
-
     <div onClick={routeChange} ref={sliderRef} className="keen-slider">
-
       {direction === "left"
-        ? Array.from({ length: 118 }, (_, i) => (
+        ? Array.from({ length: 110 }, (_, i) => (
             <div className="keen-slider__slide number-slide1" key={i}>
               <img
                 src={
@@ -139,7 +132,7 @@ const ImageCard = ({ direction }) => {
               />
             </div>
           ))
-        : Array.from({ length: 118 }, (_, i) => (
+        : Array.from({ length: 110 }, (_, i) => (
             <div className="keen-slider__slide number-slide1" key={i}>
               <img
                 src={
