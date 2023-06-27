@@ -127,7 +127,9 @@ const ImageCard = ({ direction }) => {
                     ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000,f_auto/v1687789598/${
                         images[2 * i + 1].public_id
                       }`
-                    : ""
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_1000,f_auto/v1687789598/${
+                        images[2 * i + 1].public_id
+                      }`
                 }
                 alt=""
               />
@@ -141,7 +143,9 @@ const ImageCard = ({ direction }) => {
                     ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000,f_auto/v1687789598/${
                         images[2 * i + 2].public_id
                       }`
-                    : ""
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_1000,f_auto/v1687789598/${
+                        images[2 * i + 2].public_id
+                      }`
                 }
                 alt=""
               />
