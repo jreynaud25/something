@@ -7,7 +7,7 @@ const ProductPage = () => {
   return (
     <>
       <Link to="/">
-        <button className="about-btn" style={{ cursor: "cell" }}>
+        <button className="back-btn" style={{ cursor: "cell" }}>
           Back
         </button>
       </Link>

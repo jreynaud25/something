@@ -101,7 +101,7 @@ const ImageCard = ({ direction }) => {
     }
 
     function eventWheel(e) {
-      e.preventDefault();
+      // e.preventDefault();
       if (!wheelActive) {
         wheelStart(e);
         wheelActive = true;
