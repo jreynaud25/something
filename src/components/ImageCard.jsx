@@ -1,36 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import { useNavigate } from "react-router-dom";
 import "./testSliderStyle.css";
 import "./ImageCard.css";
+import images from "../../public/images.json";
 
 const ImageCard = ({ direction }) => {
-  const [loaded, setLoaded] = React.useState([]);
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [sortedData, setSortedData] = React.useState(null);
+  const [loaded, setLoaded] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [sortedData, setSortedData] = React.useState(null);
+  console.log("images data", images);
+  // React.useEffect(() => {
+  //   const url =
+  //     "https://res.cloudinary.com/dci6ayb3x/image/list/SOMETHING.json";
+  // Fetch the JSON data
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  // console.log("raw data", data);
 
-  React.useEffect(() => {
-    const url =
-      "https://res.cloudinary.com/dci6ayb3x/image/list/SOMETHING.json";
-    // Fetch the JSON data
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log("raw data", data);
+  //       let sorting = data.resources.sort((a, b) => {
+  //         const imageNumberA = parseInt(a.public_id.split("_")[1]);
+  //         const imageNumberB = parseInt(b.public_id.split("_")[1]);
+  //         return imageNumberA - imageNumberB;
+  //       });
+  //       setSortedData(sorting);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //     });
+  // }, []);
 
-        let sorting = data.resources.sort((a, b) => {
-          const imageNumberA = parseInt(a.public_id.split("_")[1]);
-          const imageNumberB = parseInt(b.public_id.split("_")[1]);
-          return imageNumberA - imageNumberB;
-        });
-        setSortedData(sorting);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
-
-  React.useEffect(() => {
+  useEffect(() => {
     const new_loaded = [...loaded];
     new_loaded[currentSlide] = true;
     setLoaded(new_loaded);
@@ -115,7 +116,7 @@ const ImageCard = ({ direction }) => {
   );
   // console.log("sorted data", sortedData);
 
-  return sortedData ? (
+  return images ? (
     <div onClick={routeChange} ref={sliderRef} className="keen-slider">
       {direction === "left"
         ? Array.from({ length: 110 }, (_, i) => (
@@ -123,8 +124,8 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1920/v1687789598/${
-                        sortedData[2 * i + 1].public_id
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000,f_auto/v1687789598/${
+                        images[2 * i + 1].public_id
                       }`
                     : ""
                 }
@@ -137,8 +138,8 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1920/v1687789598/${
-                        sortedData[2 * i + 2].public_id
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000,f_auto/v1687789598/${
+                        images[2 * i + 2].public_id
                       }`
                     : ""
                 }

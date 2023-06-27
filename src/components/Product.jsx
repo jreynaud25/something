@@ -4,7 +4,7 @@ import "./Product.css";
 export default function Product() {
   return (
     <>
-      <section class="contrib-section">
+      <section className="contrib-section">
         <div className="contrib-wrapper">
           <span>Marilou Bal</span>
           <span>Marius Astruc</span>
@@ -38,12 +38,12 @@ export default function Product() {
           <span>Melek Zertal</span>
         </div>
       </section>
-      <section class="about-section">
-        <div class="product-wrapper">
-          <div class="product-image-wrapper">
+      <section className="about-section">
+        <div className="product-wrapper">
+          <div className="product-image-wrapper">
             <img src="../images/IMAGE_1.png"></img>
           </div>
-          <div class="product-info-wrapper">
+          <div className="product-info-wrapper">
             <span>
               Our first issue is themed around the idea of Twentysomething.{" "}
               <br></br>A person between 20 and 29 years old, a person not so
