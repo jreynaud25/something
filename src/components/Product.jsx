@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Product.css";
 
 export default function Product() {
+  const handleClick = () => {};
+
   return (
     <>
       <section className="contrib-section">
@@ -52,6 +55,9 @@ export default function Product() {
           </div>
         </div>
       </section>
+      <Link to="https://buy.stripe.com/9AQ8xN2eyeLN9NueUU">
+        <button>Buy Something</button>
+      </Link>
     </>
   );
 }
