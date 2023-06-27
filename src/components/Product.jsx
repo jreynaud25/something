@@ -7,6 +7,9 @@ export default function Product() {
 
   return (
     <>
+      <Link to="https://buy.stripe.com/9AQ8xN2eyeLN9NueUU">
+        <button className="buy-btn">Buy Something</button>
+      </Link>
       <section className="contrib-section">
         <div className="contrib-wrapper">
           <span>Marilou Bal</span>
@@ -56,7 +59,7 @@ export default function Product() {
         </div>
       </section>
       <Link to="https://buy.stripe.com/9AQ8xN2eyeLN9NueUU">
-        <button>Buy Something</button>
+        <button>Buy Something 25€</button>
       </Link>
     </>
   );
