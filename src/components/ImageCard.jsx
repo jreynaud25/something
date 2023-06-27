@@ -8,6 +8,22 @@ import images from "../../public/images.json";
 const ImageCard = ({ direction }) => {
   const [loaded, setLoaded] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [width, setWidth] = useState(1000);
+
+  useEffect(() => {
+    if (window.innerWidth > 2000) {
+      setWidth(2000);
+    } else if (window.innerWidth > 1000) {
+      setWidth(1000);
+    } else if (window.innerWidth > 700) {
+      setWidth(800);
+    } else if (window.innerWidth > 500) {
+      setWidth(600);
+    } else {
+      setWidth(500);
+    }
+    console.log("width", window.innerWidth, width);
+  }, [width, window.innerWidth]);
   // const [sortedData, setSortedData] = React.useState(null);
   // console.log("images data", images);
   //Fetching data from cloudinary
@@ -125,10 +141,10 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000/v1687789598/${
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_${width}/v1687789598/${
                         images[2 * i + 1].public_id
                       }`
-                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_1000/v1687789598/${
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_${width}/v1687789598/${
                         images[2 * i + 1].public_id
                       }`
                 }
@@ -141,10 +157,10 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_1000/v1687789598/${
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_${width}/v1687789598/${
                         images[2 * i + 2].public_id
                       }`
-                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_1000/v1687789598/${
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_${width}/v1687789598/${
                         images[2 * i + 2].public_id
                       }`
                 }
