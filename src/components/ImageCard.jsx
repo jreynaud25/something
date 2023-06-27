@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import { useNavigate } from "react-router-dom";
-import "./testSliderStyle.css";
+// import "./testSliderStyle.css";
 import "./ImageCard.css";
 import images from "../../public/images.json";
 

@@ -41,7 +41,7 @@ export default function Product() {
       <section className="about-section">
         <div className="product-wrapper">
           <div className="product-image-wrapper">
-            <img src="../images/IMAGE_1.png"></img>
+            <img src="https://res.cloudinary.com/dci6ayb3x/image/upload/v1687789598/IMAGE_2_t39xxq"></img>
           </div>
           <div className="product-info-wrapper">
             <span>
