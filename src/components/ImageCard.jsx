@@ -119,9 +119,15 @@ const ImageCard = ({ direction }) => {
       window.addEventListener("wheel", eventWheel, {
         passive: false,
       });
-      window.addEventListener("touchmove", eventWheel, {
-        passive: false,
-      });
+      window.addEventListener(
+        "touchmove",
+        () => {
+          window.trigger("wheel");
+        },
+        {
+          passive: false,
+        }
+      );
     });
   };
   const [sliderRef] = useKeenSlider(
