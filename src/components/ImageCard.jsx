@@ -42,6 +42,7 @@ const ImageCard = ({ direction }) => {
   //         return imageNumberA - imageNumberB;
   //       });
   //       setSortedData(sorting);
+  //       console.log("sorted data", sorting);
   //     })
   //     .catch((error) => {
   //       console.error("Error:", error);
