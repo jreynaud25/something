@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 
 export default function Product() {
-  const handleClick = () => {};
-
   return (
     <>
       <Link to="https://buy.stripe.com/9AQ8xN2eyeLN9NueUU">
