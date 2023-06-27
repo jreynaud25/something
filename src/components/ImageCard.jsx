@@ -9,15 +9,16 @@ const ImageCard = ({ direction }) => {
   const [loaded, setLoaded] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   // const [sortedData, setSortedData] = React.useState(null);
-  console.log("images data", images);
-  // React.useEffect(() => {
+  // console.log("images data", images);
+  //Fetching data from cloudinary
+  // useEffect(() => {
   //   const url =
   //     "https://res.cloudinary.com/dci6ayb3x/image/list/SOMETHING.json";
-  // Fetch the JSON data
+
   //   fetch(url)
   //     .then((response) => response.json())
   //     .then((data) => {
-  // console.log("raw data", data);
+  //       console.log("raw data", data);
 
   //       let sorting = data.resources.sort((a, b) => {
   //         const imageNumberA = parseInt(a.public_id.split("_")[1]);
@@ -84,7 +85,7 @@ const ImageCard = ({ direction }) => {
     }
 
     function eventWheel(e) {
-      e.preventDefault();
+      // e.preventDefault();
       if (!wheelActive) {
         wheelStart(e);
         wheelActive = true;
