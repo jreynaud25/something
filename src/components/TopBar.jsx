@@ -5,7 +5,7 @@ import "./TopBar.css";
 const TopBar = () => {
   return (
     <Link to="/product">
-      <button className="about-btn" style={{ cursor: "pointer" }}>
+      <button className="about-btn" style={{ cursor: "cell" }}>
         Buy
       </button>
     </Link>
