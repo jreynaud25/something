@@ -14,12 +14,10 @@
     flex-direction: column;
   }
 
-
-
   .keen-slider {
     min-height: 50dvh !important;
     width: 100vw !important;
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
   }
 
   .keen-slider__slide {
