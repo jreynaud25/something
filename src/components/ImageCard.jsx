@@ -141,10 +141,10 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_${width}/v1687789598/${
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_90,w_${width}/v1687789598/${
                         images[2 * i + 1].public_id
                       }`
-                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_${width}/v1687789598/${
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_10,w_${width}/v1687789598/${
                         images[2 * i + 1].public_id
                       }`
                 }
@@ -157,10 +157,10 @@ const ImageCard = ({ direction }) => {
               <img
                 src={
                   loaded[i]
-                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_90,w_${width}/v1687789598/${
+                    ? `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_90,w_${width}/v1687789598/${
                         images[2 * i + 2].public_id
                       }`
-                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,q_1,w_${width}/v1687789598/${
+                    : `https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_10,w_${width}/v1687789598/${
                         images[2 * i + 2].public_id
                       }`
                 }
