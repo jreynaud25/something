@@ -6,12 +6,10 @@ import "../components/TopBar.css";
 const ProductPage = () => {
   return (
     <>
-      <Link to="/">
-        <button className="back-btn" style={{ cursor: "cell" }}>
-          Back
-        </button>
+       <Link to="https://buy.stripe.com/9AQ8xN2eyeLN9NueUU">
+        <button className="back-btn">ADD TO CART 25€</button>
       </Link>
-      <Product />
+      <Product direction="left" />
     </>
   );
 };

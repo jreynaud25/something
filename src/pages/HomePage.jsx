@@ -6,7 +6,6 @@ import "./HomePage.css";
 const HomePage = () => {
   return (
     <div>
-      <TopBar />
       <div className="images-slider">
         <ImageCard direction="left" />
         <ImageCard direction="right" />

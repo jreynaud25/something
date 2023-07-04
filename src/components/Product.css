@@ -1,36 +1,13 @@
-section {
+.keen-slider {
   height: 100vh;
   width: 100vw;
 }
-.contrib-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.keen-slider__slide {
   height: 100vh;
-  width: 100vw;
-  justify-content: center;
 }
 
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.product-wrapper {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.product-wrapper > * {
-  flex: 1;
-}
-
-.buy-btn {
-  margin: auto;
-  position: fixed;
-  right: 0;
-  cursor: cell;
+.keen-slider__slide > img {
+  height: 100%;
+  object-fit: cover;
 }

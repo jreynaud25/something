@@ -14,11 +14,11 @@ const ImageCard = ({ direction }) => {
     if (window.innerWidth > 2000) {
       setWidth(2000);
     } else if (window.innerWidth > 1000) {
-      setWidth(1000);
+      setWidth(1500);
     } else if (window.innerWidth > 700) {
-      setWidth(800);
+      setWidth(900);
     } else if (window.innerWidth > 500) {
-      setWidth(600);
+      setWidth(700);
     } else {
       setWidth(500);
     }
