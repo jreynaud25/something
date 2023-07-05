@@ -9,6 +9,7 @@ const Product = ({ direction }) => {
   const [loaded, setLoaded] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(1000);
+  const [isMobile, setMobile] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > 2000) {
@@ -19,6 +20,10 @@ const Product = ({ direction }) => {
       setWidth(900);
     } else if (window.innerWidth > 500) {
       setWidth(700);
+    } else if (window.innerWidth <= 900) {
+      setMobile(true);
+    } else if (window.innerWidth >= 900) {
+      setMobile(false);
     } else {
       setWidth(500);
     }
@@ -140,10 +145,17 @@ const Product = ({ direction }) => {
   return images ? (
     <div ref={sliderRef} className="keen-slider">
       <div className="keen-slider__slide number-slide1">
-        <img
-          src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/COVER_FRONT_qpc6xv"
-          alt=""
-        />
+        {isMobile ? (
+          <img
+            src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/COVER_FRONT_qpc6xv_qomzh4"
+            alt=""
+          />
+        ) : (
+          <img
+            src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/COVER_FRONT_qpc6xv"
+            alt=""
+          />
+        )}
       </div>
       <div
         className="keen-slider__slide number-slide1"
@@ -161,7 +173,8 @@ const Product = ({ direction }) => {
           old at the same time.”
           <br></br>
           <br></br>
-          Print 200 copies, Format: 230 x 300 mm, Paper: 135g - Semi-Matte Coated, 135g - Glossy Coated
+          Print 200 copies, Format: 230 x 300 mm, Paper: 135g - Semi-Matte
+          Coated, 135g - Glossy Coated
         </span>
       </div>
 
