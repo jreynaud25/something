@@ -23,6 +23,7 @@
     height: 50svh !important;
     min-height: 50svh !important;
     width: 100vw !important;
+    pointer-events: none !important;
     /* pointer-events: none !important; */
   }
 
