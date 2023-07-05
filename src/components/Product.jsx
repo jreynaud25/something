@@ -231,7 +231,7 @@ const Product = ({ direction }) => {
       <div className="keen-slider__slide number-slide1">
         {isMobile ? (
           <img
-            src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/      WhatsApp_Image_2023-07-05_at_11.25.44_saarxh
+            src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/WhatsApp_Image_2023-07-05_at_11.25.44_saarxh
             "
             alt=""
           />
