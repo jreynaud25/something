@@ -20,13 +20,15 @@ const ImageCard = ({ direction }) => {
       setWidth(900);
     } else if (window.innerWidth > 500) {
       setWidth(700);
-    } else if (window.innerWidth <= 900) {
-      setMobile(true);
-    } else if (window.innerWidth >= 900) {
-      setMobile(false);
     } else {
       setWidth(500);
     }
+
+    if(window.innerWidth < 900){
+      console.log("less tahn 900")
+      setMobile(true);
+    }
+    console.log(isMobile)
     console.log("width", window.innerWidth, width);
   }, [width, window.innerWidth]);
   // const [sortedData, setSortedData] = React.useState(null);
@@ -137,12 +139,12 @@ const ImageCard = ({ direction }) => {
   };
 
   const randomScroll = (slider) => {
-    if (isMobile) {
       setInterval(() => {
+        if (isMobile) {
         let ran = Math.floor(Math.random() * (110 - 0 + 1) + 0);
         slider.moveToIdx(ran);
+        }
       }, 1500);
-    }
   };
 
   const [sliderRef] = useKeenSlider(
@@ -154,7 +156,7 @@ const ImageCard = ({ direction }) => {
       rubberband: false,
       vertical: true,
     },
-    [WheelControls, randomScroll]
+   [WheelControls, randomScroll]
   );
   // console.log("sorted data", sortedData);
 
