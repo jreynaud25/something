@@ -119,14 +119,35 @@ const ImageCard = ({ direction }) => {
       window.addEventListener("wheel", eventWheel, {
         passive: false,
       });
+      let start_y;
+
+      window.addEventListener(
+        "touchstart",
+        function (event) {
+          start_y = event.touches[0].clientY;
+        },
+        { passive: false }
+      );
+
       window.addEventListener(
         "touchmove",
-        () => {
-          window.trigger("wheel");
+        function (event) {
+          event.preventDefault(); // Prevent scrolling while touching
         },
-        {
-          passive: false,
-        }
+        { passive: false }
+      );
+
+      window.addEventListener(
+        "touchend",
+        function (event) {
+          let end_y = event.changedTouches[0].clientY;
+          if (start_y > end_y) {
+            console.log("swiped up");
+          } else {
+            console.log("swiped down");
+          }
+        },
+        { passive: false }
       );
     });
   };
@@ -138,6 +159,7 @@ const ImageCard = ({ direction }) => {
       loop: true,
       rubberband: false,
       vertical: true,
+      drag: false,
     },
     [WheelControls]
   );

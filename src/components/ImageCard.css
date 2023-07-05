@@ -24,7 +24,5 @@
     overflow: hidden;
   }
 
-  .keen-slider__slide > img {
-    rotate: 90deg;
-  }
+ 
 }
