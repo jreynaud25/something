@@ -174,7 +174,7 @@ const Product = ({ direction }) => {
           old at the same time.”
           <br></br>
           <br></br>
-          Created by Lise De Martino, Astrid Durand and Jean René Jean.
+          Created by Lise de Martino, Astrid Durand and Jean René Jean.
           <br></br>
           <br></br>
           Print 200 copies, 280 Pages, Format: 230 x 300 mm, Paper: 135g - Semi-Matte
