@@ -1,10 +1,10 @@
 .keen-slider {
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
 }
 
 .keen-slider__slide {
-  height: 100vh;
+  height: 100svh;
 }
 
 .keen-slider__slide > img {

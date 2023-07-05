@@ -15,6 +15,10 @@
   font: inherit;
 }
 
+a {
+  color: black;
+}
+
 /* dark mode user-agent-styles */
 
 html {

@@ -159,6 +159,9 @@ const Product = ({ direction }) => {
           Our first issue is themed around the idea of the Twentysomething. “A
           person between 20 and 29 years old, a person not so young but not so
           old at the same time.”
+          <br></br>
+          <br></br>
+          Print 200 copies, Format: 230 x 300 mm, Paper: 135g - Semi-Matte Coated, 135g - Glossy Coated
         </span>
       </div>
 
