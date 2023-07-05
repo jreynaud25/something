@@ -9,8 +9,8 @@ const ImageCard = ({ direction }) => {
   const [loaded, setLoaded] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(1000);
-  const [isMobile, setMobile] = useState(false);
-
+  // const [isMobile, setMobile] = useState(false);
+  let isMobile = false;
   useEffect(() => {
     if (window.innerWidth > 2000) {
       setWidth(2000);
@@ -25,8 +25,7 @@ const ImageCard = ({ direction }) => {
     }
 
     if(window.innerWidth < 900){
-      console.log("less tahn 900")
-      setMobile(true);
+      isMobile = true
     }
     console.log(isMobile)
     console.log("width", window.innerWidth, width);
