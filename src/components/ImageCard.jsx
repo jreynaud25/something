@@ -9,6 +9,7 @@ const ImageCard = ({ direction }) => {
   const [loaded, setLoaded] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [width, setWidth] = useState(1000);
+  const [isMobile, setMobile] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth > 2000) {
@@ -19,8 +20,12 @@ const ImageCard = ({ direction }) => {
       setWidth(900);
     } else if (window.innerWidth > 500) {
       setWidth(700);
+    } else if (window.innerWidth <= 900) {
+      setMobile(true);
+    } else if (window.innerWidth >= 900) {
+      setMobile(false);
     } else {
-      setWidth(600);
+      setWidth(500);
     }
     console.log("width", window.innerWidth, width);
   }, [width, window.innerWidth]);
@@ -130,6 +135,16 @@ const ImageCard = ({ direction }) => {
       );
     });
   };
+
+  const randomScroll = (slider) => {
+    if (isMobile) {
+      setInterval(() => {
+        let ran = Math.floor(Math.random() * (110 - 0 + 1) + 0);
+        slider.moveToIdx(ran);
+      }, 1500);
+    }
+  };
+
   const [sliderRef] = useKeenSlider(
     {
       animationEnded(s) {
@@ -139,7 +154,7 @@ const ImageCard = ({ direction }) => {
       rubberband: false,
       vertical: true,
     },
-    [WheelControls]
+    [WheelControls, randomScroll]
   );
   // console.log("sorted data", sortedData);
 

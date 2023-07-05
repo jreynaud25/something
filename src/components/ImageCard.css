@@ -14,12 +14,12 @@
     font-size: 12.5px;
     overflow: hidden !important;
   }
-  .images-slider {
+  .home .images-slider {
     flex-direction: column;
     height: 100svh !important;
   }
 
-  .keen-slider {
+  .home .keen-slider {
     height: 50svh !important;
     min-height: 50svh !important;
     width: 100vw !important;
