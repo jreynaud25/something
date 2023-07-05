@@ -27,6 +27,15 @@
     /* pointer-events: none !important; */
   }
 
+  .home .keen-slider__slide > img {
+    height: 100vw;
+    rotate: 90deg;
+  }
+
+  .home .keen-slider:nth-child(2) .keen-slider__slide > img {
+    transform: translateX(-16.9vw);
+  }
+
   .keen-slider__slide {
     overflow: hidden;
   }

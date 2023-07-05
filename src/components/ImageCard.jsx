@@ -25,7 +25,7 @@ const ImageCard = ({ direction }) => {
     }
 
     if(window.innerWidth < 900){
-      isMobile = true
+      isMobile = false
     }
     console.log(isMobile)
     console.log("width", window.innerWidth, width);
