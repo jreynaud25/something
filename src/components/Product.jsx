@@ -174,8 +174,16 @@ const Product = ({ direction }) => {
           old at the same time.”
           <br></br>
           <br></br>
-          Print 200 copies, Format: 230 x 300 mm, Paper: 135g - Semi-Matte
+          Created by Lise De Martino, Astrid Durand and Jean René Jean.
+          <br></br>
+          <br></br>
+          Print 200 copies, 280 Pages, Format: 230 x 300 mm, Paper: 135g - Semi-Matte
           Coated, 135g - Glossy Coated
+          <br></br><br></br>
+          <span style={{display: "flex", justifyContent: "space-between"}}>
+          <a style={{ color: "inherit", textDecoration: "none"}} href="https://instagram.com/something.edited">@something.edited</a>
+          <a style={{ color: "inherit", textDecoration: "none"}} href="mailto:contact@something-edited.com">contact@something-edited.com</a>
+          </span>
         </span>
       </div>
 
