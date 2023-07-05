@@ -29,6 +29,7 @@ const Product = ({ direction }) => {
     }
     console.log("width", window.innerWidth, width);
   }, [width, window.innerWidth]);
+  
   // const [sortedData, setSortedData] = React.useState(null);
   // console.log("images data", images);
   //Fetching data from cloudinary
@@ -167,7 +168,7 @@ const Product = ({ direction }) => {
           width: "100vw",
         }}
       >
-        <span style={{ maxWidth: "55ch" }}>
+        <span className="text" style={{ maxWidth: "55ch" }}>
           Our first issue is themed around the idea of the Twentysomething. “A
           person between 20 and 29 years old, a person not so young but not so
           old at the same time.”
@@ -253,7 +254,7 @@ const Product = ({ direction }) => {
           width: "100vw",
         }}
       >
-        <span style={{ maxWidth: "55ch" }}>
+        <span className="text" style={{ maxWidth: "55ch" }}>
           In order to create a unique and relevant curation, each contributor’s
           response is freely presented in individual booklets. During the
           launch, we invite visitors to explore, curate, and select them as they
