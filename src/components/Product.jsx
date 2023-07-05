@@ -155,11 +155,10 @@ const Product = ({ direction }) => {
           width: "100vw",
         }}
       >
-        <span style={{ maxWidth: "50ch" }}>
-          In order to create a unique and relevant curation, each contributor’s
-          response is freely presented in individual booklets. We invite you to
-          explore, curate, and select them as you desire, thereby giving you the
-          opportunity to composeyour own unique edition of Something.
+        <span style={{ maxWidth: "55ch" }}>
+          Our first issue is themed around the idea of the Twentysomething. “A
+          person between 20 and 29 years old, a person not so young but not so
+          old at the same time.”
         </span>
       </div>
 
@@ -211,6 +210,32 @@ const Product = ({ direction }) => {
         <span>Louis Vinhtong</span>
         <span>Georges Wendell</span>
         <span>Melek Zertal</span>
+      </div>
+
+      <div className="keen-slider__slide number-slide1">
+        <img
+          src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/WhatsApp_Image_2023-07-05_at_11.25_g21z6u"
+          alt=""
+        />
+      </div>
+
+      <div
+        className="keen-slider__slide number-slide1"
+        style={{
+          backgroundColor: "black",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100vw",
+        }}
+      >
+        <span style={{ maxWidth: "55ch" }}>
+          In order to create a unique and relevant curation, each contributor’s
+          response is freely presented in individual booklets. During the
+          launch, we invite visitors to explore, curate, and select them as they
+          desire, thereby giving them the opportunity to compose their own
+          unique edition of Something.
+        </span>
       </div>
     </div>
   ) : (
