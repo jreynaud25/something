@@ -23,7 +23,7 @@
     height: 50svh !important;
     min-height: 50svh !important;
     width: 100vw !important;
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
     /* pointer-events: none !important; */
   }
 
@@ -33,7 +33,7 @@
   }
 
   .home .keen-slider:nth-child(2) .keen-slider__slide > img {
-    transform: translateX(-16.9%);
+    transform: translateX(-16%);
   }
 
   .keen-slider__slide {
