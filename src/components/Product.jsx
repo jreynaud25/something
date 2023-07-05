@@ -181,7 +181,7 @@ const Product = ({ direction }) => {
 
       <div className="keen-slider__slide number-slide1">
         <img
-          src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/COVER_FRONT-2-2_ohjg4k"
+          src="https://res.cloudinary.com/dci6ayb3x/image/upload/c_scale,f_auto,q_100,w_2000/v1687789598/SOMETHING_SPREADS_wgpg26"
           alt=""
         />
       </div>
