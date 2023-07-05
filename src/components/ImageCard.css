@@ -33,7 +33,7 @@
   }
 
   .home .keen-slider:nth-child(2) .keen-slider__slide > img {
-    transform: translateX(-16.9vw);
+    transform: translateX(-16.9%);
   }
 
   .keen-slider__slide {
