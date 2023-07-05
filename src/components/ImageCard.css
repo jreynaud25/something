@@ -32,5 +32,10 @@
     box-sizing: border-box;
   }
 
+
  
+}
+
+a button {
+  color: black !important;
 }
