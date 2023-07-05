@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import { useNavigate } from "react-router-dom";
+
 // import "./testSliderStyle.css";
 import "./ImageCard.css";
 import images from "../../public/images.json";
@@ -61,11 +61,7 @@ const ImageCard = ({ direction }) => {
     setLoaded(new_loaded);
   }, [currentSlide]);
 
-  let navigate = useNavigate();
-  const routeChange = () => {
-    let path = `product`;
-    navigate(path);
-  };
+
 
   const WheelControls = (slider) => {
     let touchTimeout;
@@ -160,7 +156,7 @@ const ImageCard = ({ direction }) => {
   // console.log("sorted data", sortedData);
 
   return images ? (
-    <div onClick={routeChange} ref={sliderRef} className="keen-slider">
+    <div  ref={sliderRef} className="keen-slider">
       {direction === "left"
         ? Array.from({ length: 110 }, (_, i) => (
             <div className="keen-slider__slide number-slide1" key={i}>
